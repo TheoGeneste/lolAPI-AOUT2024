@@ -12,7 +12,7 @@ const ItemDetailsPage = () => {
         <img src={"https://ddragon.leagueoflegends.com/cdn/14.21.1/img/item/"+currentItem.image.full} alt="" />
         <p>{currentItem.plaintext}</p>
         <div className="d-flex gap-3">
-            {currentItem.into.map((obj) => {
+            {currentItem.into && currentItem.into.map((obj) => {
                 return <img key={obj} src={"https://ddragon.leagueoflegends.com/cdn/14.21.1/img/item/"+obj+".png"} alt="" />
             })}
         </div>
